@@ -1,16 +1,27 @@
+import { Routes, Route } from "react-router-dom";
+// import { getTrendingMovies } from 'API/api-service';
+import SharedLayout from 'layout/SharedLayout';
+import Home from 'pages/Home/Home';
+import Movies from 'pages/Movies/Movies';
+import Cast from "./Cast/Cast";
+import Reviews from "./Reviews/Reviews";
+import ErrorPage from "pages/ErrorPage/ErrorPage";
+
 export const App = () => {
+  // const data = getTrendingMovies()
+  // console.log(data)
+
+
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      started work
-    </div>
+    <Routes>
+      <Route path="/" element={<SharedLayout />}>
+        <Route index element={<Home />} />
+        <Route path='movies/:movieId' element={<Movies />}>
+          <Route path="cast" element={<Cast />} />
+          <Route path="reviews" element={<Reviews />} />
+        </Route>
+        <Route path="*" element={<ErrorPage />} />
+      </Route>
+    </Routes>
   );
 };
