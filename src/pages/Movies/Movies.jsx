@@ -30,7 +30,7 @@ const Movies = () => {
     return (
         <div>
             <Button>Go back</Button>
-            <MovieDetailsCard movie={selectedMovie} />
+            {selectedMovie && <MovieDetailsCard movie={selectedMovie} />}
 
             <div>
                 <p>Additional information</p>
