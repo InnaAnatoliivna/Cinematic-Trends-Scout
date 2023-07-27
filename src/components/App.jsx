@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-// import { getTrendingMovies } from 'API/api-service';
 import SharedLayout from 'layout/SharedLayout';
 import Home from 'pages/Home/Home';
 import Movies from 'pages/Movies/Movies';
@@ -8,9 +7,6 @@ import Reviews from "./Reviews/Reviews";
 import ErrorPage from "pages/ErrorPage/ErrorPage";
 
 export const App = () => {
-  // const data = getTrendingMovies()
-  // console.log(data)
-
 
   return (
     <Routes>

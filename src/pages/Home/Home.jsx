@@ -7,21 +7,21 @@ const Home = () => {
 
     const [arrayResults, setArrayResults] = useState(null);
     const [isLoader, setIsLoader] = useState(false);
-    const [error, setError] = useState('');
+    // const [Error, setError] = useState('');
 
     useEffect(() => {
         const fetchTrendingMovies = async () => {
             setIsLoader(true);
-            setError('');
+            // setError('');
 
             try {
                 const data = await getTrendingMovies();
-                console.log(data.results);
+                // console.log(data.results);
                 setArrayResults(data.results);
             }
             catch (error) {
                 // setError(error.message);
-                console.error(error.message);
+                console.message(error);
             } finally {
                 setIsLoader(false);
             }

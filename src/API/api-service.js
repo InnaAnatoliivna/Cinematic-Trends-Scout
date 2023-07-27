@@ -34,6 +34,9 @@ export const getMovieReviews = async (movieId) => {
     return data;
 }
 
+export const getPosterMovie = (pathToPoster) => {
+    return `https://image.tmdb.org/t/p/original${pathToPoster}`
+}
 
 // Приклад виклику функції для отримання повної інформації про фільм з ID = 12345 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // const movieId = 12345;
