@@ -1,0 +1,23 @@
+.header {
+  padding-bottom: 25px;
+}
+
+.navigation {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 20px;
+}
+
+.menu {
+  font-size: 25px;
+  font-weight: 500;
+
+  text-decoration: none;
+  color: inherit;
+}
+
+.icon {
+  font-size: 30px;
+  color: rgb(71, 0, 0);
+}

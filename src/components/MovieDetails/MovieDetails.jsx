@@ -9,16 +9,13 @@ const MovieDetails = () => {
     const { movieId } = useParams();
     const [selectedMovie, setSelectedMovie] = useState(null);
     const [isLoader, setIsLoader] = useState(false);
-
     const navigate = useNavigate();
 
     useEffect(() => {
         const fetchMovieDetails = async () => {
             setIsLoader(true);
-            // console.log(movieId)
             try {
                 const data = await getMoviesDetails(movieId);
-                // console.log(data);
                 setSelectedMovie(data);
             }
             catch (error) {

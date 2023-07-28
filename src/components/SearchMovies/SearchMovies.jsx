@@ -6,10 +6,6 @@ const SearchMovies = ({ onSearchSubmit }) => {
 
     const navigate = useNavigate();
 
-    // useEffect(() => {
-    //     setSearchQuery(searchQuery);
-    // }, [searchQuery]);
-
     const handleChange = (e) => {
         setSearchQuery(e.currentTarget.value.toLowerCase().trim())
     }

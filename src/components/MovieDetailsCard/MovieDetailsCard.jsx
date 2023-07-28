@@ -6,7 +6,7 @@ const MovieDetailsCard = ({ movie }) => {
 
     const getUserScope = movie => Math.floor((movie.vote_average / 10) * 100);
     const getYear = movie => movie.release_date.split('-')[0];
-    const getGenres = movie => movie.genres.map(genre => <span>{genre.name}</span>);
+    const getGenres = movie => movie.genres.map(genre => <span key={genre.id}>{genre.name}</span>);
 
     const posterPath = movie.poster_path ? getPosterMovie(movie.poster_path) : defaultImage;
 
