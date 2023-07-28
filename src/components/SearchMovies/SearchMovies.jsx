@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const SearchMovies = ({ onSearchSubmit }) => {
@@ -6,9 +6,9 @@ const SearchMovies = ({ onSearchSubmit }) => {
 
     const navigate = useNavigate();
 
-    useEffect(() => {
-        setSearchQuery(searchQuery);
-    }, [searchQuery]);
+    // useEffect(() => {
+    //     setSearchQuery(searchQuery);
+    // }, [searchQuery]);
 
     const handleChange = (e) => {
         setSearchQuery(e.currentTarget.value.toLowerCase().trim())

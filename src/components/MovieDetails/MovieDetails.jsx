@@ -1,12 +1,40 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import MovieDetailsCard from 'components/MovieDetailsCard/MovieDetailsCard';
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate, useParams } from "react-router-dom";
+import Loader from 'components/Loader/Loader';
+import { getMoviesDetails } from 'API/api-service';
+import Button from 'components/Button/Button';
 
-const MovieDetails = ({ selectedMovie }) => {
+const MovieDetails = () => {
+    const { movieId } = useParams();
+    const [selectedMovie, setSelectedMovie] = useState(null);
+    const [isLoader, setIsLoader] = useState(false);
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const fetchMovieDetails = async () => {
+            setIsLoader(true);
+            // console.log(movieId)
+            try {
+                const data = await getMoviesDetails(movieId);
+                // console.log(data);
+                setSelectedMovie(data);
+            }
+            catch (error) {
+                console.error(error.message);
+            } finally {
+                setIsLoader(false);
+            }
+        }
+        fetchMovieDetails()
+    }, [movieId])
 
     return (
         <>
-            <MovieDetailsCard movie={selectedMovie} />
+            {isLoader && <Loader />}
+            <Button handleClick={() => { navigate(-1) }}>Go back</Button>
+            {selectedMovie && <MovieDetailsCard movie={selectedMovie} />}
             <div>
                 <p>Additional information</p>
                 <Link to='cast'>Cast</Link>

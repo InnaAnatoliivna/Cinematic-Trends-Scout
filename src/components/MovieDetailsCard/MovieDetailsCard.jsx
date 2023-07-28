@@ -1,5 +1,6 @@
 import React from 'react';
 import { getPosterMovie } from 'API/api-service';
+import defaultImage from 'defaultImageActor.png'
 
 const MovieDetailsCard = ({ movie }) => {
 
@@ -7,10 +8,12 @@ const MovieDetailsCard = ({ movie }) => {
     const getYear = movie => movie.release_date.split('-')[0];
     const getGenres = movie => movie.genres.map(genre => <span>{genre.name}</span>);
 
+    const posterPath = movie.poster_path ? getPosterMovie(movie.poster_path) : defaultImage;
+
     return (
         <div>
             <img
-                src={getPosterMovie(movie.poster_path)}
+                src={getPosterMovie(posterPath)}
                 alt={movie.original_title}
                 width={250}
             />
