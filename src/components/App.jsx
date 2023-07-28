@@ -1,4 +1,4 @@
-import { lazy } from 'react';
+import { lazy, Suspense } from 'react';
 import { Routes, Route } from "react-router-dom";
 import SharedLayout from 'layout/SharedLayout';
 //react-lazy>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -12,17 +12,20 @@ const ErrorPage = lazy(() => import("pages/ErrorPage/ErrorPage"));
 
 export const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<SharedLayout />}>
-        <Route index element={<Home />} />
-        <Route path='movies' element={<Movies />} />
-        <Route path='movies/:movieId' element={<MovieDetails />}>
-          <Route path="cast" element={<Cast />} />
-          <Route path="reviews" element={<Reviews />} />
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Home />} />
+          <Route path='/movies' element={<Movies />} />
+          <Route path='/movies/:movieId' element={<MovieDetails />}>
+            <Route path="cast" element={<Cast />} />
+            <Route path="reviews" element={<Reviews />} />
+          </Route>
         </Route>
+        {/* Якщо користувач зайшов за неіснуючим маршрутом, його необхідно перенаправляти на домашню сторінку. */}
         <Route path="*" element={<ErrorPage />} />
-      </Route>
-    </Routes>
+      </Routes>
+    </Suspense>
   );
 };
 
