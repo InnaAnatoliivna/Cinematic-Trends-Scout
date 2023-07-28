@@ -4,21 +4,31 @@ import Home from 'pages/Home/Home';
 import Movies from 'pages/Movies/Movies';
 import Cast from "./Cast/Cast";
 import Reviews from "./Reviews/Reviews";
-import ErrorPage from "pages/ErrorPage/ErrorPage";
+// import ErrorPage from "pages/ErrorPage/ErrorPage";
 import SearchMovies from "./SearchMovies/SearchMovies";
+import React, { useState } from 'react';
+// import { getSearchMovies } from 'API/api-service';
+
 
 export const App = () => {
+
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const onSearchSubmit = (query) => {
+    setSearchQuery(query);
+    console.log(query)
+  };
 
   return (
     <Routes>
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<Home />} />
-        <Route path='movies' element={<SearchMovies />} />
-        <Route path='movies/:movieId' element={<Movies />}>
+        <Route path='movies' element={<SearchMovies onSearchSubmit={onSearchSubmit} />} />
+        <Route path='movies/:movieId' element={<Movies searchQuery={searchQuery} />}>
           <Route path="cast" element={<Cast />} />
           <Route path="reviews" element={<Reviews />} />
         </Route>
-        <Route path="*" element={<ErrorPage />} />
+        {/* <Route path="*" element={<ErrorPage />} /> */}
       </Route>
     </Routes>
   );
