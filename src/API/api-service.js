@@ -38,25 +38,5 @@ export const getPosterMovie = (pathToPoster) => {
     return `https://image.tmdb.org/t/p/original${pathToPoster}`
 }
 
-// Приклад виклику функції для отримання повної інформації про фільм з ID = 12345 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// const movieId = 12345;
-// getMoviesDetails(movieId)
-//     .then(movieDetails => {
-//         console.log(movieDetails);
-//     })
-//     .catch(error => {
-//         console.error('Помилка при отриманні інформації про фільм:', error);
-//     });
-
-// // Приклад виклику функції для пошуку фільмів за ключовим словом
-// const query = 'Spider-Man';
-// getSearchMovies(query)
-//     .then(searchResults => {
-//         console.log(searchResults);
-//     })
-//     .catch(error => {
-//         console.error('Помилка при пошуку фільмів:', error);
-//     });
-
 
 
