@@ -8,6 +8,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* background-color: rgba(255, 244, 231, 0.585); */
+  background: rgb(255, 249, 232);
+  background: radial-gradient(
+    circle,
+    rgba(255, 249, 232, 0.9473039215686274) 63%,
+    rgba(209, 192, 140, 0.6195728291316527) 100%
+  );
 }
 
 code {
@@ -16,13 +24,18 @@ code {
 }
 
 :root {
-  --color-title: rgb(1, 1, 66);
-  --color-border: rgb(5, 5, 53);
-  --color-label: rgb(6, 6, 103);
-  --color-input: rgb(7, 7, 139);
-  --color-btn: white;
-  --bc-btn: rgba(4, 4, 74, 0.873);
-  --bc-btn-hover: rgba(11, 11, 162, 0.648);
+  --color-title: rgb(26, 12, 12);
+  --color-text: rgb(36, 14, 14);
+  --color-hover: rgba(183, 42, 42, 0.951);
+  --shadow-bottom: 0px 9px 7px -5px rgba(48, 23, 10, 0.68);
+  -webkit-box-shadow: 0px 9px 7px -5px rgba(48, 23, 10, 0.68);
+  -moz-box-shadow: 0px 9px 7px -5px rgba(48, 23, 10, 0.68);
+  --bc-btn: rgb(255, 235, 164);
+  --bc-btn-hover: rgba(233, 189, 108, 0.873);
+  --transform-hover: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  --transition: transform, linear, 500;
 }
 
 /* a {
@@ -51,13 +64,37 @@ button {
 }
 
 .container {
-  width: 1280px;
-  padding: 30px 32px;
-  /* padding-right: 32px; */
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  min-width: 200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  /* margin: 0 auto; */
+  /* position: relative; */
+}
+
+@media screen and (min-width: 320px) {
+  .container {
+    max-width: 320px;
+    padding-left: auto;
+    padding-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 
 .active {
-  color: brown;
+  color: rgba(183, 42, 42, 0.951);
 }
