@@ -22,7 +22,6 @@ export const App = () => {
             <Route path="reviews" element={<Reviews />} />
           </Route>
         </Route>
-        {/* Якщо користувач зайшов за неіснуючим маршрутом, його необхідно перенаправляти на домашню сторінку. */}
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Suspense>

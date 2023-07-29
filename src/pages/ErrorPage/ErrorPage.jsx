@@ -1,12 +1,16 @@
-import SharedLayout from 'layout/SharedLayout';
-import Home from 'pages/Home/Home';
+// import SharedLayout from 'layout/SharedLayout';
+// import Home from 'pages/Home/Home';
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const ErrorPage = () => {
+    const navigate = useNavigate();
+    setTimeout(() => navigate('/'), 2000)
+
     return (
-        // <div>404 Not Found</div>
+        <h2>404 Not Found</h2>
         //  Якщо користувач зайшов за неіснуючим маршрутом, його необхідно перенаправляти на домашню сторінку.
-        <SharedLayout><Home /></SharedLayout>
+        // <SharedLayout><Home /></SharedLayout>
     )
 }
 
