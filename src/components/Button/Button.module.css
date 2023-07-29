@@ -1,0 +1,40 @@
+.button {
+  background-color: var(--bc-btn);
+  border: 0.5px solid var(--color-text);
+  color: var(--color-title);
+  font-size: 11px;
+
+  padding: 4px 8px;
+  margin: 10px 0;
+  outline: none;
+  border-radius: 4px;
+  transition: background-color linear 500, border linear 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  &:hover {
+    background-color: var(--bc-btn-hover);
+    border: 0.5px solid transparent;
+  }
+}
+
+.icon {
+  color: var(--color-text);
+}
+
+/* ____________adaptive_______________ */
+
+@media screen and (min-width: 768px) {
+  .button {
+    font-size: 15px;
+    padding: 8px 14px;
+    margin: 14px 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .button {
+    padding: 10px 18px;
+    margin: 25px 0;
+  }
+}

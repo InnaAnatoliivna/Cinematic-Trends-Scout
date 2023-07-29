@@ -2,6 +2,7 @@ import { getTrendingMovies } from 'API/api-service';
 import Loader from 'components/Loader/Loader';
 import TrendingMoviesList from 'components/TrendingMoviesList/TrendingMoviesList';
 import { useState, useEffect } from 'react';
+import css from 'pages/Home/Home.module.css';
 
 const Home = () => {
     const [arrayResults, setArrayResults] = useState(null);
@@ -24,8 +25,8 @@ const Home = () => {
     }, [])
 
     return (
-        <div>
-            <h2>Trending today</h2>
+        <div className={css.wrapper}>
+            <h2 className={css.title}>Trending today</h2>
             {isLoader && <Loader />}
             {arrayResults && <TrendingMoviesList arrayResults={arrayResults} />}
         </div>
