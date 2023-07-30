@@ -17,6 +17,7 @@
 }
 
 .link {
+  font-size: 20px;
   text-decoration: none;
   color: inherit;
   transition: transform linear 500, color linear 500;
