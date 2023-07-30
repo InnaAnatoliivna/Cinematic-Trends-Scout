@@ -1,0 +1,51 @@
+.flexWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  border-bottom: 1px solid var(--color-title);
+  padding: 15px 0;
+}
+
+.title {
+  color: var(--color-title);
+  max-width: 250px;
+  margin-bottom: 12px;
+}
+
+.text {
+  max-width: 250px;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .flexWrap {
+    flex-direction: row;
+  }
+  .wrapper {
+    padding-top: 15px;
+  }
+  .title {
+    max-width: 400px;
+    margin-bottom: 18px;
+  }
+  .text {
+    max-width: 400px;
+    margin-bottom: 18px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .flexWrap {
+    gap: 30px;
+  }
+  .title {
+    margin-bottom: 23px;
+    max-width: 700px;
+  }
+  .text {
+    margin-bottom: 23px;
+    max-width: 700px;
+  }
+}

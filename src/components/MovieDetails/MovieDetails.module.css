@@ -1,0 +1,20 @@
+.wrapper {
+  padding: 25px 0;
+}
+.text {
+  margin-bottom: 15px;
+  color: var(--color-text);
+  font-size: 20px;
+}
+.link {
+  display: block;
+  margin-bottom: 15px;
+  margin-right: 25px;
+  /* text-decoration: none; */
+
+  font-size: 18px;
+  color: var(--color-title);
+  &:hover {
+    color: var(--color-hover);
+  }
+}

@@ -1,21 +1,25 @@
 .button {
+  display: inline-block;
   background-color: var(--bc-btn);
   border: 0.5px solid var(--color-text);
   color: var(--color-title);
   font-size: 11px;
+  text-decoration: none;
 
   padding: 4px 8px;
   margin: 10px 0;
-  outline: none;
-  border-radius: 4px;
   transition: background-color linear 500, border linear 500;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  border-radius: 4px;
   &:hover {
     background-color: var(--bc-btn-hover);
     border: 0.5px solid transparent;
   }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  /* gap: 8px; */
 }
 
 .icon {
