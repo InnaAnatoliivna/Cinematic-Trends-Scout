@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Cinematic-Trends-Scout/static/css/main.72efd275.css",
-    "main.js": "/Cinematic-Trends-Scout/static/js/main.1927674d.js",
+    "main.js": "/Cinematic-Trends-Scout/static/js/main.664c19b1.js",
     "static/css/685.8bb3ea9e.chunk.css": "/Cinematic-Trends-Scout/static/css/685.8bb3ea9e.chunk.css",
     "static/js/685.22f0dc01.chunk.js": "/Cinematic-Trends-Scout/static/js/685.22f0dc01.chunk.js",
     "static/css/681.59b1daeb.chunk.css": "/Cinematic-Trends-Scout/static/css/681.59b1daeb.chunk.css",
@@ -10,8 +10,8 @@
     "static/js/736.4d471b09.chunk.js": "/Cinematic-Trends-Scout/static/js/736.4d471b09.chunk.js",
     "static/css/995.058a02fd.chunk.css": "/Cinematic-Trends-Scout/static/css/995.058a02fd.chunk.css",
     "static/js/995.4ade260a.chunk.js": "/Cinematic-Trends-Scout/static/js/995.4ade260a.chunk.js",
-    "static/css/313.c11b843a.chunk.css": "/Cinematic-Trends-Scout/static/css/313.c11b843a.chunk.css",
-    "static/js/313.079d4891.chunk.js": "/Cinematic-Trends-Scout/static/js/313.079d4891.chunk.js",
+    "static/css/313.fb80a241.chunk.css": "/Cinematic-Trends-Scout/static/css/313.fb80a241.chunk.css",
+    "static/js/313.9b52624e.chunk.js": "/Cinematic-Trends-Scout/static/js/313.9b52624e.chunk.js",
     "static/js/247.094a5251.chunk.js": "/Cinematic-Trends-Scout/static/js/247.094a5251.chunk.js",
     "static/js/629.13380ddb.chunk.js": "/Cinematic-Trends-Scout/static/js/629.13380ddb.chunk.js",
     "static/js/728.06a632ce.chunk.js": "/Cinematic-Trends-Scout/static/js/728.06a632ce.chunk.js",
@@ -19,7 +19,7 @@
     "static/media/defaultImageActor.png": "/Cinematic-Trends-Scout/static/media/defaultImageActor.71d46e13f65023749c94.png",
     "index.html": "/Cinematic-Trends-Scout/index.html",
     "main.72efd275.css.map": "/Cinematic-Trends-Scout/static/css/main.72efd275.css.map",
-    "main.1927674d.js.map": "/Cinematic-Trends-Scout/static/js/main.1927674d.js.map",
+    "main.664c19b1.js.map": "/Cinematic-Trends-Scout/static/js/main.664c19b1.js.map",
     "685.8bb3ea9e.chunk.css.map": "/Cinematic-Trends-Scout/static/css/685.8bb3ea9e.chunk.css.map",
     "685.22f0dc01.chunk.js.map": "/Cinematic-Trends-Scout/static/js/685.22f0dc01.chunk.js.map",
     "681.59b1daeb.chunk.css.map": "/Cinematic-Trends-Scout/static/css/681.59b1daeb.chunk.css.map",
@@ -28,8 +28,8 @@
     "736.4d471b09.chunk.js.map": "/Cinematic-Trends-Scout/static/js/736.4d471b09.chunk.js.map",
     "995.058a02fd.chunk.css.map": "/Cinematic-Trends-Scout/static/css/995.058a02fd.chunk.css.map",
     "995.4ade260a.chunk.js.map": "/Cinematic-Trends-Scout/static/js/995.4ade260a.chunk.js.map",
-    "313.c11b843a.chunk.css.map": "/Cinematic-Trends-Scout/static/css/313.c11b843a.chunk.css.map",
-    "313.079d4891.chunk.js.map": "/Cinematic-Trends-Scout/static/js/313.079d4891.chunk.js.map",
+    "313.fb80a241.chunk.css.map": "/Cinematic-Trends-Scout/static/css/313.fb80a241.chunk.css.map",
+    "313.9b52624e.chunk.js.map": "/Cinematic-Trends-Scout/static/js/313.9b52624e.chunk.js.map",
     "247.094a5251.chunk.js.map": "/Cinematic-Trends-Scout/static/js/247.094a5251.chunk.js.map",
     "629.13380ddb.chunk.js.map": "/Cinematic-Trends-Scout/static/js/629.13380ddb.chunk.js.map",
     "728.06a632ce.chunk.js.map": "/Cinematic-Trends-Scout/static/js/728.06a632ce.chunk.js.map",
@@ -37,6 +37,6 @@
   },
   "entrypoints": [
     "static/css/main.72efd275.css",
-    "static/js/main.1927674d.js"
+    "static/js/main.664c19b1.js"
   ]
 }
