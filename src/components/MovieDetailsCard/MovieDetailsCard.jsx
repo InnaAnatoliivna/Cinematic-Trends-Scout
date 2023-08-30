@@ -7,7 +7,7 @@ const MovieDetailsCard = ({ movie }) => {
 
     const getUserScope = movie => Math.floor((movie.vote_average / 10) * 100);
     const getYear = movie => movie.release_date.split('-')[0];
-    const getGenres = movie => movie.genres.map(genre => <span key={genre.id}>{genre.name}</span>);
+    const getGenres = movie => movie.genres.map(genre => <span key={genre.id} className={css.span}>{genre.name}</span>);
 
     const posterPath = movie.poster_path ? getPosterMovie(movie.poster_path) : defaultImage;
 
@@ -22,11 +22,12 @@ const MovieDetailsCard = ({ movie }) => {
             </div>
             <div className={css.wrapper}>
                 <h2 className={css.title}>{movie.title} ({getYear(movie)})</h2>
-                <p className={css.text}>User score: {getUserScope(movie)}%</p>
-                <h3 className={css.title}>Overview</h3>
-                <p className={css.text}>{movie.overview}</p>
-                <h4 className={css.title}>Genres</h4>
-                <p>{getGenres(movie)}</p>
+                <div className={css.wrapDescription}>
+                    <p className={css.text}>User score: {getUserScope(movie)}%</p>
+                    <h3 className={css.title}>Overview</h3>
+                    <p className={css.text}>{movie.overview}</p>
+                    <h4 className={css.title}>Genres</h4>
+                    <p>{getGenres(movie)}</p></div>
             </div>
         </div>
     )
