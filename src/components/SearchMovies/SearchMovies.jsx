@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import css from './searchMovie.module.css';
 
 const SearchMovies = ({ onSearchSubmit }) => {
     const [searchQuery, setSearchQuery] = useState('');
@@ -22,16 +23,16 @@ const SearchMovies = ({ onSearchSubmit }) => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className={css.form}>
                 <input
-                    className="Search-input"
+                    className={css.input}
                     type="text"
                     autoComplete="off"
                     autoFocus
                     placeholder="Search movies"
                     onChange={handleChange}
                     value={searchQuery} />
-                <button type='submit'>Search</button>
+                <button type='submit' className={css.button}>Search</button>
             </form>
         </div>
     )

@@ -18,7 +18,6 @@ const Movies = () => {
             try {
                 const data = await getSearchMovies(searchQuery);
                 setSearchResults(data.results);
-                // setSearchResults(data.map(({ id, title }) => ({ id, title })));
             }
             catch (error) {
                 console.error(error.message);
@@ -44,8 +43,8 @@ const Movies = () => {
 
     return (
         <div>
-            {isLoader && <Loader />}
             <SearchMovies onSearchSubmit={onSearchSubmit} />
+            {isLoader && <Loader />}
             {searchResults &&
                 <SearchResultsList arrayResults={searchResults} />
             }

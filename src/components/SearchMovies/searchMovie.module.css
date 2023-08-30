@@ -1,0 +1,41 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.input {
+  width: 300px;
+  max-width: 100%;
+  height: 20px;
+  color: #111;
+  background-color: #0000;
+  border: none;
+  border-bottom: 1px solid #111;
+  outline: none;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  transition-property: border-color;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 10px 12px;
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 20px 0 0 20px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 0.5px solid var(--color-text);
+  font-size: 14px;
+  color: var(--color-title);
+  outline: none;
+  background-color: var(--bc-btn);
+  transition: background-color linear 500ms, border linear 500ms;
+  &:hover {
+    background-color: var(--bc-btn-hover);
+    border: 0.5px solid transparent;
+  }
+}

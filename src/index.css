@@ -27,15 +27,8 @@ code {
   --color-title: rgb(26, 12, 12);
   --color-text: rgb(36, 14, 14);
   --color-hover: rgba(183, 42, 42, 0.951);
-  /* --shadow-bottom: 0px 9px 7px -5px rgba(48, 23, 10, 0.68);
-  -webkit-box-shadow: 0px 9px 7px -5px rgba(48, 23, 10, 0.68);
-  -moz-box-shadow: 0px 9px 7px -5px rgba(48, 23, 10, 0.68); */
   --bc-btn: rgb(255, 235, 164);
   --bc-btn-hover: rgba(233, 189, 108, 0.873);
-  /* --transform-hover: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  --transition: transform, linear, 500; */
 }
 
 h1,
