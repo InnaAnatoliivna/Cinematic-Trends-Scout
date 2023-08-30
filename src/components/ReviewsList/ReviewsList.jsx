@@ -1,13 +1,14 @@
-import React from 'react'
+import React from 'react';
+import css from './ReviewsList.module.css'
 
 const ReviewsList = ({ reviewsResults }) => {
     return (
-        <ul>
+        <ul className={css.list}>
             {reviewsResults.map(review => {
                 return (
-                    <li key={review.id}>
-                        <h4>Author: {review.author}</h4>
-                        <p>"{review.content}"</p>
+                    <li key={review.id} className={css.item}>
+                        <h4 className={css.text}>Author: {review.author}</h4>
+                        <p className={css.text}>"{review.content}"</p>
                     </li>
                 )
             })}
